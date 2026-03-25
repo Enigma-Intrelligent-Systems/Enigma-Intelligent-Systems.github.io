@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 15% 4%;
+    --foreground: 0 0% 96%;
+
+    --card: 240 12% 6%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 240 12% 6%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 215 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 10%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 215 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --signal: 215 70% 45%;
+    --signal-foreground: 0 0% 100%;
+
+    --glow: 215 75% 50%;
+
+    --border: 240 10% 14%;
+    --input: 240 10% 14%;
+    --ring: 215 70% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 15% 4%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 215 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 10%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 240 10% 14%;
+    --sidebar-ring: 215 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-red {
+    background: linear-gradient(135deg, hsl(215 80% 60%), hsl(215 70% 45%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-glass {
+    background: hsl(240 12% 6% / 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(240 10% 14% / 0.6);
+  }
+
+  .border-glow-red {
+    border-color: hsl(215 70% 45% / 0.3);
+  }
+
+  .shadow-glow-red {
+    box-shadow: 0 0 30px -10px hsl(215 70% 45% / 0.3);
+  }
+
+  .signal-line {
+    background: linear-gradient(90deg, transparent, hsl(215 70% 45% / 0.4), transparent);
+    height: 1px;
+  }
+}
